@@ -85,6 +85,22 @@ public class DesenhaPanel extends JPanel {
 	}
 	
 	
+	@Override
+	protected void paintComponent(Graphics arg0) {
+		super.paintComponent(arg0);               
+		
+		for(int i = 0; i < contagemFormas; i++) {
+			
+			if(getFormas()[i] != null) {
+				setFormaAtual(getFormas()[i]);
+				getFormaAtual().desenha(arg0);
+			}
+			
+			
+			
+			
+		}
+	}
 	
 	
 	
