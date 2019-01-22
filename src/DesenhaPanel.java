@@ -108,12 +108,14 @@ public class DesenhaPanel extends JPanel {
 	public void limpaUltimaForma() {
 		
 		setContagemFormas(getContagemFormas() - 1);
+		repaint();
 		
 	}
 	
 	public void limpaDesenho() {
 		
 		setContagemFormas(0);
+		repaint();
 		
 	}
 	
