@@ -111,6 +111,12 @@ public class DesenhaPanel extends JPanel {
 		
 	}
 	
+	public void limpaDesenho() {
+		
+		setContagemFormas(0);
+		
+	}
+	
 	
 	
 	
