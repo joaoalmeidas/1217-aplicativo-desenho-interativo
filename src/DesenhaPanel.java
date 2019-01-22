@@ -183,8 +183,17 @@ public class DesenhaPanel extends JPanel {
 
 		@Override
 		public void mouseReleased(MouseEvent e) {
-			// TODO Auto-generated method stub
 			super.mouseReleased(e);
+			
+			getFormaAtual().setX2(e.getX());
+			getFormaAtual().setY2(e.getY());
+			
+			getFormas()[contagemFormas] = getFormaAtual();
+			
+			setFormaAtual(null);
+			
+			repaint();
+			
 		}
 
 		@Override
