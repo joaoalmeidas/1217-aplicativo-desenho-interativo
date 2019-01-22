@@ -136,8 +136,13 @@ public class DesenhaPanel extends JPanel {
 
 		@Override
 		public void mouseDragged(MouseEvent e) {
-			// TODO Auto-generated method stub
 			super.mouseDragged(e);
+			
+			getFormaAtual().setX2(e.getX());
+			getFormaAtual().setY2(e.getY());
+			
+			repaint();
+			
 		}
 
 		@Override
