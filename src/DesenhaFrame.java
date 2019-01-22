@@ -44,7 +44,7 @@ public class DesenhaFrame extends JFrame{
 		botaoLimpar = new JButton("Limpar");
 		listaCores = new JComboBox<String>(nomeCores);
 		listaFormas = new JComboBox<String>(nomeFormas);
-		preenchido = new JCheckBox("Teste");
+		preenchido = new JCheckBox("Preenchido");
 		
 		opcoes.add(botaoDesfazer);
 		opcoes.add(botaoLimpar);
