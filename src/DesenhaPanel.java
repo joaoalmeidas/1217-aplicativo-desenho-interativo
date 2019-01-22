@@ -9,5 +9,6 @@ public class DesenhaPanel extends JPanel {
 	private int tipoForma = 0;
 	private MinhaForma formaAtual;
 	private Color corAtual;
+	private boolean preenchido;
 	
 }
