@@ -154,8 +154,10 @@ public class DesenhaPanel extends JPanel {
 
 		@Override
 		public void mouseMoved(MouseEvent e) {
-			// TODO Auto-generated method stub
 			super.mouseMoved(e);
+			
+			labelStatus.setText(String.format("%d, %d", e.getX(), e.getY()));
+			
 		}
 
 		@Override
