@@ -41,10 +41,10 @@ public class DesenhaFrame extends JFrame{
 		opcoes.setLayout(new FlowLayout());
 		
 		botaoDesfazer = new JButton("Desfazer");
-		botaoLimpar = new JButton("Desfazer");
+		botaoLimpar = new JButton("Limpar");
 		listaCores = new JComboBox<String>(nomeCores);
 		listaFormas = new JComboBox<String>(nomeFormas);
-		preenchido = new JCheckBox();
+		preenchido = new JCheckBox("Teste");
 		
 		opcoes.add(botaoDesfazer);
 		opcoes.add(botaoLimpar);

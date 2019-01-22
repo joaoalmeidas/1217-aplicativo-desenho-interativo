@@ -205,7 +205,7 @@ public class DesenhaPanel extends JPanel {
 
 		@Override
 		public void mouseReleased(MouseEvent e) {
-			super.mouseReleased(e);
+			//super.mouseReleased(e);
 			
 			getFormaAtual().setX2(e.getX());
 			getFormaAtual().setY2(e.getY());
