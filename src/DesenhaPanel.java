@@ -31,6 +31,12 @@ public class DesenhaPanel extends JPanel {
 	
 	
 	public void setContagemFormas(int contagemFormas) {
+		
+		if(contagemFormas < 0) {
+			
+			throw new IllegalArgumentException();
+		}
+		
 		this.contagemFormas = contagemFormas;
 	}
 	
@@ -96,10 +102,13 @@ public class DesenhaPanel extends JPanel {
 				getFormaAtual().desenha(arg0);
 			}
 			
-			
-			
-			
 		}
+	}
+	
+	public void limpaUltimaForma() {
+		
+		setContagemFormas(getContagemFormas() - 1);
+		
 	}
 	
 	
