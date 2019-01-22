@@ -1,5 +1,6 @@
 import java.awt.Color;
 
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class DesenhaPanel extends JPanel {
@@ -10,5 +11,6 @@ public class DesenhaPanel extends JPanel {
 	private MinhaForma formaAtual;
 	private Color corAtual;
 	private boolean preenchido;
+	private JLabel labelStatus;
 	
 }
