@@ -18,6 +18,19 @@ public class DesenhaPanel extends JPanel {
 	private boolean preenchido;
 	private JLabel labelStatus;
 	
+	public DesenhaPanel(JLabel labelStatus) {
+		
+		this.labelStatus = labelStatus;
+		formas = new MinhaForma[100];
+		contagemFormas = 0;
+		tipoForma = 2;
+		formaAtual = null;
+		corAtual = Color.BLACK;
+		EventosMouse eventos = new EventosMouse();
+		addMouseListener(eventos);
+		addMouseMotionListener(eventos);
+	}
+	
 	
 	public MinhaForma[] getFormas() {
 		return formas;
