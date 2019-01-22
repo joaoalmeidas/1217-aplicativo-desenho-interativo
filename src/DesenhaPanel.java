@@ -1,5 +1,9 @@
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
+import java.awt.event.MouseWheelEvent;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -120,7 +124,78 @@ public class DesenhaPanel extends JPanel {
 	}
 	
 	
-	
+	public class EventosMouse extends MouseAdapter implements MouseMotionListener{
+		
+		
+		
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			super.mouseClicked(e);
+			
+		}
+
+		@Override
+		public void mouseDragged(MouseEvent e) {
+			// TODO Auto-generated method stub
+			super.mouseDragged(e);
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+			// TODO Auto-generated method stub
+			super.mouseEntered(e);
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+			// TODO Auto-generated method stub
+			super.mouseExited(e);
+		}
+
+		@Override
+		public void mouseMoved(MouseEvent e) {
+			// TODO Auto-generated method stub
+			super.mouseMoved(e);
+		}
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+			super.mousePressed(e);
+			
+			if(getFormaAtual() instanceof MinhaCircunferencia) {
+				
+				setTipoForma(0);
+				
+			}else if(getFormaAtual() instanceof MeuRetangulo) {
+				
+				setTipoForma(1);
+				
+			}else if(getFormaAtual() instanceof MinhaLinha) {
+				
+				setTipoForma(2);
+				
+			}
+			
+			getFormaAtual().setX1(e.getX());
+			getFormaAtual().setY1(e.getY());
+			
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			// TODO Auto-generated method stub
+			super.mouseReleased(e);
+		}
+
+		@Override
+		public void mouseWheelMoved(MouseWheelEvent e) {
+			// TODO Auto-generated method stub
+			super.mouseWheelMoved(e);
+		}
+		
+		
+		
+	}
 	
 	
 	
