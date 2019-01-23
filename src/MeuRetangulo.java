@@ -19,10 +19,10 @@ public class MeuRetangulo extends MinhaFormaComLimites {
 	public void desenha(Graphics g) {
 		
 		g.setColor(getCor());
-		g.drawRect(retornaXCimaEsquerda(), retornaYCimaEsquerda(), retornaLargura(), retornaAltura());
+		g.drawRect(retornaXCimaEsquerda(), retornaYCimaEsquerda(), retornaAltura(), retornaLargura());
 		
 		if(isPreenchido() == true) {
-			g.fillRect(retornaXCimaEsquerda(), retornaYCimaEsquerda(), retornaLargura(), retornaAltura());
+			g.fillRect(retornaXCimaEsquerda(), retornaYCimaEsquerda(), retornaAltura(), retornaLargura());
 		}
 		
 	}

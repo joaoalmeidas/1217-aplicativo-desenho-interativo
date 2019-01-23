@@ -17,10 +17,10 @@ public class MinhaCircunferencia extends MinhaFormaComLimites{
 	public void desenha(Graphics g) {
 		
 		g.setColor(getCor());
-		g.drawOval(retornaXCimaEsquerda(), retornaYCimaEsquerda(), retornaLargura(), retornaAltura());
+		g.drawOval(retornaXCimaEsquerda(), retornaYCimaEsquerda(), retornaAltura(), retornaLargura());
 		
 		if(isPreenchido() == true) {
-			g.fillOval(retornaXCimaEsquerda(), retornaYCimaEsquerda(), retornaLargura(), retornaAltura());
+			g.fillOval(retornaXCimaEsquerda(), retornaYCimaEsquerda(), retornaAltura(), retornaLargura());
 		}
 		
 	}
