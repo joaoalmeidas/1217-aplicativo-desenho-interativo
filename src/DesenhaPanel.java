@@ -153,8 +153,11 @@ public class DesenhaPanel extends JPanel {
 			super.mouseDragged(e);
 			
 			
+			
 			getFormaAtual().setX2(e.getX());
 			getFormaAtual().setY2(e.getY());
+			
+			formaAtual.desenha(getGraphics());
 			
 			labelStatus.setText(String.format("%d, %d", e.getX(), e.getY()));
 			

@@ -45,6 +45,7 @@ public class DesenhaFrame extends JFrame{
 		listaCores = new JComboBox<String>(nomeCores);
 		listaFormas = new JComboBox<String>(nomeFormas);
 		preenchido = new JCheckBox("Preenchido");
+		preenchido.setSelected(true);
 		
 		opcoes.add(botaoDesfazer);
 		opcoes.add(botaoLimpar);
@@ -150,6 +151,8 @@ public class DesenhaFrame extends JFrame{
 				}	
 				
 		);
+		
+		
 		
 	}
 	
