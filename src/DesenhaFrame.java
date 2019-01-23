@@ -113,7 +113,7 @@ public class DesenhaFrame extends JFrame{
 					public void itemStateChanged(ItemEvent arg0) {
 						
 						desenho.setCorAtual(cores[listaCores.getSelectedIndex()]);
-						//desenho.setCorAtual(Color.MAGENTA);
+						
 					}
 					
 				}
@@ -128,15 +128,15 @@ public class DesenhaFrame extends JFrame{
 					public void itemStateChanged(ItemEvent arg0) {
 						
 						if(listaFormas.getSelectedIndex() == 0) {
-							System.out.println("circulo");
+							
 							desenho.setFormaAtual(new MinhaCircunferencia());
 							
 						}else if(listaFormas.getSelectedIndex() == 1) {
-							System.out.println("quadrado");
+							
 							desenho.setFormaAtual(new MeuRetangulo());
 							
 						}else if(listaFormas.getSelectedIndex() == 2) {
-							System.out.println("linha");
+							
 							desenho.setFormaAtual(new MinhaLinha());
 							
 						}

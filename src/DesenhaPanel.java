@@ -238,12 +238,9 @@ public class DesenhaPanel extends JPanel {
 			getFormaAtual().setY2(e.getY());
 			
 			getFormas()[contagemFormas] = getFormaAtual();
-			
-			//
+		
 			setContagemFormas(getContagemFormas() + 1);
-			System.out.println("------------------------------------------------------------------"+getContagemFormas());
-			//
-			
+
 			setFormaAtual(null);
 			
 			repaint();
