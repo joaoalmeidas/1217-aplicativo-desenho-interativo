@@ -3,6 +3,7 @@ import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ContainerListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
@@ -56,6 +57,23 @@ public class DesenhaFrame extends JFrame{
 		add(opcoes, BorderLayout.NORTH);
 		add(desenho, BorderLayout.CENTER);
 		add(status, BorderLayout.SOUTH);
+		
+		desenho.setPreenchido(preenchido.isSelected());
+		desenho.setCorAtual(cores[listaCores.getSelectedIndex()]);
+		
+		if(listaFormas.getSelectedItem().toString().equals("Circunferência")) {
+			
+			desenho.setFormaAtual(new MinhaCircunferencia());
+			
+		}else if(listaFormas.getSelectedItem().toString().equals("Quadrado")) {
+			
+			desenho.setFormaAtual(new MeuRetangulo());
+			
+		}else if(listaFormas.getSelectedItem().toString().equals("Linha")) {
+			
+			desenho.setFormaAtual(new MinhaLinha());
+			
+		}
 		
 		botaoDesfazer.addActionListener(
 				
@@ -152,7 +170,9 @@ public class DesenhaFrame extends JFrame{
 				
 		);
 		
+
 		
+
 		
 	}
 	
