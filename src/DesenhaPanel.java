@@ -26,6 +26,8 @@ public class DesenhaPanel extends JPanel {
 		tipoForma = 2;
 		formaAtual = null;
 		corAtual = Color.BLACK;
+		setBackground(Color.WHITE);
+		preenchido = true;
 		EventosMouse eventos = new EventosMouse();
 		addMouseListener(eventos);
 		addMouseMotionListener(eventos);
@@ -115,8 +117,7 @@ public class DesenhaPanel extends JPanel {
 		for(int i = 0; i < contagemFormas; i++) {
 			
 			if(getFormas()[i] != null) {
-				setFormaAtual(getFormas()[i]);
-				getFormaAtual().desenha(arg0);
+				getFormas()[i].desenha(arg0);
 			}
 			
 		}
@@ -150,6 +151,7 @@ public class DesenhaPanel extends JPanel {
 		@Override
 		public void mouseDragged(MouseEvent e) {
 			super.mouseDragged(e);
+			
 			
 			getFormaAtual().setX2(e.getX());
 			getFormaAtual().setY2(e.getY());
@@ -186,31 +188,43 @@ public class DesenhaPanel extends JPanel {
 			
 			if(getFormaAtual() instanceof MinhaCircunferencia) {
 				
+				System.out.println("ta aqui");
+				formaAtual = new MinhaCircunferencia(0, 0, 0, 0, getCorAtual(), isPreenchido());
 				setTipoForma(0);
 				
 			}else if(getFormaAtual() instanceof MeuRetangulo) {
 				
+				formaAtual = new MeuRetangulo(0, 0, 0, 0, getCorAtual(), isPreenchido());
 				setTipoForma(1);
 				
 			}else if(getFormaAtual() instanceof MinhaLinha) {
 				
+				formaAtual = new MinhaLinha(0, 0, 0, 0, getCorAtual());
 				setTipoForma(2);
 				
 			}
 			
+			
 			getFormaAtual().setX1(e.getX());
 			getFormaAtual().setY1(e.getY());
+			getFormaAtual().setX2(e.getX());
+			getFormaAtual().setY2(e.getY());
 			
 		}
 
 		@Override
 		public void mouseReleased(MouseEvent e) {
-			//super.mouseReleased(e);
+			super.mouseReleased(e);
 			
 			getFormaAtual().setX2(e.getX());
 			getFormaAtual().setY2(e.getY());
 			
 			getFormas()[contagemFormas] = getFormaAtual();
+			
+			//
+			setContagemFormas(getContagemFormas() + 1);
+			System.out.println("------------------------------------------------------------------"+getContagemFormas());
+			//
 			
 			setFormaAtual(null);
 			
