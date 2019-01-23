@@ -18,7 +18,7 @@ public class MinhaLinha extends MinhaForma {
 	public void desenha(Graphics g) {
 		
 		g.setColor(getCor());
-		g.drawLine(getX1(), getY1(), getX2(), getX2());
+		g.drawLine(getX1(), getY1(), getX2(), getY2());
 		
 	}
 	
