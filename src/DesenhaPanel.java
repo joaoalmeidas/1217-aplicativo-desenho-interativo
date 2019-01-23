@@ -191,7 +191,6 @@ public class DesenhaPanel extends JPanel {
 			
 			if(getFormaAtual() instanceof MinhaCircunferencia) {
 				
-				System.out.println("ta aqui");
 				formaAtual = new MinhaCircunferencia(0, 0, 0, 0, getCorAtual(), isPreenchido());
 				setTipoForma(0);
 				
@@ -204,6 +203,22 @@ public class DesenhaPanel extends JPanel {
 				
 				formaAtual = new MinhaLinha(0, 0, 0, 0, getCorAtual());
 				setTipoForma(2);
+				
+			}else {
+				
+				if(getTipoForma() == 0) {
+					
+					formaAtual = new MinhaCircunferencia(0, 0, 0, 0, getCorAtual(), isPreenchido());
+					
+				}else if(getTipoForma() == 1) {
+					
+					formaAtual = new MeuRetangulo(0, 0, 0, 0, getCorAtual(), isPreenchido());
+					
+				}else if(getTipoForma() == 2) {
+					
+					formaAtual = new MinhaLinha(0, 0, 0, 0, getCorAtual());
+					
+				}
 				
 			}
 			
