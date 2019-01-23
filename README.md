@@ -44,3 +44,5 @@ e) Uma caixa de seleção que especifica se uma forma deve ou não ter preenchim
 Declare e crie os componentes de interface no construtor de DrawFrame. Você precisará criar a barra de status JLabel antes de criar
 o DrawPanel, para que possa passar o JLabel como um argumento para o construtor do DrawPanel. Por fim, crie uma classe de teste
 que inicialize e exiba o DrawFrame para executar o aplicativo.
+
+![exercicio](1.PNG)
